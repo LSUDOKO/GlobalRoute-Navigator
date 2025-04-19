@@ -23,6 +23,12 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=["*"],
 )
+# Get port from environment variable or use default
+port = int(os.environ.get("PORT", 8000))
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 # Load the graph once
 graph_path = os.path.join(os.path.dirname(__file__), "graph_final_8_precalc.pkl")
