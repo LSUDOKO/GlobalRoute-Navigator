@@ -51,7 +51,7 @@ uvicorn main:app --reload
 
 
 ### **👥 Contributors**
-- **Aditya Rathod**
-- **Joshua DMello**
-- **Joshua D’Sylva**
+- **Arpit singh**
+- **Aaditya**
+- **Jay**
 ---
