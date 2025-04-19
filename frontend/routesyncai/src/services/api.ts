@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Use the API_URL that matches your setup
-const API_URL = "http://127.0.0.1:8000";
+// Update to use the deployed backend URL
+const API_URL = "https://globalroute-navigator-backend.onrender.com";
 
 // Create axios instance with better timeout and retry logic
 export const api = axios.create({
@@ -114,7 +114,7 @@ export const findPaths = async (data: any) => {
         throw new Error(`Validation Error: ${error.response.data.detail[0].msg}`);
       } else if (error.code === "ERR_NETWORK") {
         console.error("Network Error - Check if the server is running");
-        throw new Error("Cannot connect to server. Please make sure the backend is running at http://127.0.0.1:8000");
+        throw new Error("Cannot connect to server. Please make sure the backend is running at https://globalroute-navigator-backend.onrender.com");
       } else if (error.code === "ECONNABORTED") {
         console.error("Request timed out");
         throw new Error("Request timed out. The server might be overloaded.");
